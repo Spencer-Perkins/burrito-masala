@@ -1,0 +1,34 @@
+// out: null
+
+/* Color palette from https://color.adobe.com/burrito-masala-color-theme-11958052/ */
+
+@color1: #F3AD06;
+@color2: #D87101;
+@color3: #D66201;
+@color4: #C73B04;
+@color5: #5B0300;
+
+/* Colors 20% darker than original */
+@darkColor1: darken(@color1, 20%);
+@darkColor2: darken(@color2, 20%);
+@darkColor3: darken(@color3, 20%);
+@darkColor4: darken(@color4, 20%);
+@darkColor5: darken(@color5, 20%);
+
+/* Colors 20% lighter than original */
+@lightColor1: lighten(@color1, 20%);
+@lightColor2: lighten(@color2, 20%);
+@lightColor3: lighten(@color3, 20%);
+@lightColor4: lighten(@color4, 20%);
+@lightColor5: lighten(@color5, 20%);
+
+/* Desaturated colors */
+@greyColor1: desaturate(@color1, 100%);
+@greyColor2: desaturate(@color2, 100%);
+@greyColor3: desaturate(@color3, 100%);
+@greyColor4: desaturate(@color4, 100%);
+@greyColor5: desaturate(@color5, 100%);
+
+/* Black and white */
+@lightColor: #FFFFFF;
+@darkColor: #000000;

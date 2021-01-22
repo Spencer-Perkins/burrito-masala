@@ -1,0 +1,266 @@
+@import 'palette.less';
+@import 'mixins.less';
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+} 
+
+/* Bold text */
+b {
+	font-weight: bolder;		
+}
+
+header {
+		color: @color5;
+		height: 200px;
+		/* Placeholder image needs to be replaced with image of Burrito Masala's food, .png prefered. Image no larger than 1920x1280 */
+		background-image: url(../images/hero.jpeg); 
+		background-size: cover;
+		background-position: 50% 50%;
+		padding-top: 6em;
+	
+	/* Headings */
+ 	h1,h2{	
+		padding: .1em 0 0 .2em;
+		background-color: @color5;
+		.gradient(to right, @color5, @lightColor5);
+		color: @color1;
+		width: 100%;
+	}
+	h1 {
+		font-size: 2.5em;
+		padding-bottom: .2em;
+	}
+	h2 {
+		font-size: 1em;
+		padding: 0 0 .9em .9em;
+	}
+}
+
+main {
+	line-height: 1.5em;
+	
+	/* Headings in main section */
+	h2 {
+		font-size: 2em;
+		text-align: center;
+		.gradient(to right, @color5, @lightColor5);
+		color: @color1;
+		padding: .3em;
+    }
+	h3 {
+		font-size: 1.5em;
+		text-align: left;
+		line-height: 1.5em;
+		color: @color4;
+	}
+	
+	/* Menu section */
+	section{
+		padding: 1em;
+		#menu1 {
+			padding-bottom: 0;
+		}
+		#menu2 {
+			padding-top: 0;
+		} 
+	}
+	ul {
+		list-style-type: circle;
+        padding-left: 3em;
+	}
+	
+	/* Hero image */
+	img {
+		margin-top: .5em;
+	}
+	
+	/* Desktop link, keep as 'display: none' for desktop phone text not to show in mobile view */
+	#desktop {
+		display:none;
+	} 
+	
+	/* Address and hours */
+	#hours, #address {
+			text-align: center;
+		}
+	
+	/* Order information */
+	#orderinfo {
+			font-size: .9em;
+			line-height: 1.2em;
+			margin: .5em 0 .5em 0;
+		}
+	
+	/* Mobile link */
+	#mobile {
+		font-size: 1.2em;
+		display: block;
+		text-align: center;
+		text-decoration: none;
+		color: @lightColor5;
+	} 
+	#visitus {
+		padding: 0;
+	}
+	
+	/* Google map */
+	#googlemap {
+		width: 100%;
+		height: 20em;
+	}
+} 
+	
+footer {
+	.gradient(to right, @color5, @lightColor5);
+		color: @color2;
+	
+	/* Social media links */
+	#socialmedia {
+		display: block;
+		text-align: center;
+		font-size: 2.5em;
+	}
+	
+	/* Social media icons */
+	.fab {
+		text-decoration: none;
+		color: @color1;
+		margin: .3em;
+		&:hover {
+			color: @color3;
+		} 
+	}
+	
+	/* Copyright */
+	#copyright {
+		color: @color2;
+		font-size: .65em;
+		padding: 1em 1em .35em 1em;
+		text-align: center;
+	} 
+}
+
+/*
+
+TABLET STYLESHEET
+
+The following CSS affects all screen sizes larger than 480 pixels wide.
+
+*/
+
+@media only screen and (min-width: 481px) { 
+	header {
+		height: 350px;
+		padding-top: 14em;
+		text-align: left;
+	}
+	main {
+
+		/* Hero image */
+		img {
+			float: right;
+			max-width: 50%;
+			margin: 1em .5em .3em .5em;
+		}
+		
+		/* Headings */
+		h2 {
+			margin-top: .5em;
+		}
+		
+		/* Menu */
+		section {
+			#menu1 {
+				padding-top: 0;
+			}
+		}
+		#orderinfo, #desktop {
+			text-align: center;
+		}
+		
+		/* Mobile phone link. Keep at 'display: none' so mobile link doesn't show in tablet/desktop view */
+		#mobile {
+			display: none;
+		}
+		
+		/* Desktop phone text */
+		#desktop {
+			font-size: 1.2em;
+			display: block;
+		}
+		
+		/* Visit Us section */
+		#visitus {
+			width: 100%;
+		}
+		
+		/* Google map */
+		#googlemap {
+			width: 100%;
+			height: 30em;
+		}
+	}
+		
+	footer {
+		
+		/* Copyright */
+		#copyright {
+			font-size: 1em;
+			padding: .7em;
+		}
+		
+		/* Social media links */
+		#socialmedia {
+			font-size: 4em;
+		}
+		
+		/* Social media icons */
+		.fab {
+			padding: .5em .5em .3em .5em;
+			margin: 0;
+		}
+	} 
+}
+/*
+
+DESKTOP STYLESHEET
+
+The following CSS affects all screen sizes larger than 1024 pixels wide.
+
+*/
+
+@media only screen and (min-width: 1025px) {
+	body {
+		
+		/* Site wrapper */
+		.wrapper(lighten(@color1, 40%));
+	}
+	header {
+		padding-top: 14.5em;
+	}
+	
+	main {
+		background-color: @lightColor;
+
+		/* Google map */
+		#googlemap {
+			height: 30em;
+		} 
+	} 
+	footer {
+		
+		/* Copyright */
+		#copyright {
+			font-size: .8em;
+			padding: .4em;
+		}
+		
+		/* Social media icons */
+		.fab {
+			padding: .2em .4em .3em .4em;
+		}
+	}
+}
+	
